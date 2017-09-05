@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>钬、混迹天涯的博客</title>
+	<link rel="shortcut icon" href="__PUBLIC__/images/Panda.ico" type="image/x-icon">
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/index.css">
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/article.css">
+	<script type="text/javascript" src="__PUBLIC__/js/html5shiv.js"></script>
+	<script type="text/javascript" src="__PUBLIC__/js/jquery-3.1.0.min.js"></script>
+	<script src="__PUBLIC__/js/script.js"></script>
+</head>
+<body>
+	<div class="body-top"></div>
+	<div class="container">
+		<include file='Public/head' />
+
+		<div class="content">
+			<div class="content-top"></div>
+			<div class="content-body-outer">
+				<div class="content-body clearfix">
+					<div class="content-body-left" id="content_body_left">
+						<h1 class="article-title">{$artidata.title}</h1>
+						<p class="article-message"><span class="fabu-time">日期：{$artidata.time|substr=0,10}</span><span class="author">作者：伍伟乐</span><span>所属栏目：{$cate.catename}</span></p>
+						<div class="article">
+							{$artidata.content|htmlspecialchars_decode=###}
+						</div>
+						<div class="article-footer">
+							<p>
+								上一篇：
+								<if condition="$prev['id'] eq ''">
+									暂无上一篇
+								<else/>
+									<a href="__CONTROLLER__/index/aid/{$prev.id}" class="prev-article">{$prev.title}</a>
+								</if>
+							</p>
+							<p>
+								下一篇：
+								<if condition="$next['id'] eq ''">
+									暂无下一篇
+								<else/>
+									<a href="__CONTROLLER__/index/aid/{$next.id}" class="next-article">{$next.title}</a>
+								</if>
+							</p>
+						</div>
+					</div><!--内容部分左边结束-->
+					<include file='Public/aside' />
+				</div>
+			</div>
+			<div class="content-bottom"></div>
+			<div class="gotop" id="gotop"></div>
+		</div>
+	</div>
+	<include file='Public/footer' />
+
+	<script type="text/javascript">
+		showMessage();
+		selectMon('/blog/Home/Cate/articleDateLstSolve');
+		returnTop();
+	</script>
+</body>
+</html>

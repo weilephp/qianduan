@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>钬、混迹天涯的博客</title>
+	<link rel="shortcut icon" href="__PUBLIC__/images/Panda.ico" type="image/x-icon">
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/index.css">
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/article.css">
+	<script type="text/javascript" src="__PUBLIC__/js/html5shiv.js"></script>
+	<script type="text/javascript" src="__PUBLIC__/js/jquery-3.1.0.min.js"></script>
+	<script src="__PUBLIC__/js/script.js"></script>
+</head>
+<body>
+	<div class="body-top"></div>
+	<div class="container">
+		<include file='Public/head' />
+
+		<div class="content">
+			<div class="content-top"></div>
+			<div class="content-body-outer">
+				<div class="content-body clearfix">
+					<div class="content-body-left" id="content_body_left">
+						<h1 class="article-title" style="margin-bottom: 20px;">个人简介</h1>
+						<div>{$result.content|htmlspecialchars_decode=###}</div>
+					</div><!--内容部分左边结束-->
+					<include file='Public/aside' />
+				</div>
+			</div>
+			<div class="content-bottom"></div>
+			<div class="gotop" id="gotop"></div>
+		</div>
+	</div>
+	<include file='Public/footer' />
+
+	<script type="text/javascript">
+		showMessage();
+		selectMon('/blog/Home/Cate/articleDateLstSolve');
+		returnTop()
+	</script>
+</body>
+</html>

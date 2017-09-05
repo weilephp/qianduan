@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>后台管理系统</title>
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/css/list.css">
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/add.css">
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/iconfont.css">
+	<script type="text/javascript" src="__PUBLIC__/js/html5shiv.js"></script>
+	<script type="text/javascript" src="__PUBLIC__/js/jquery-3.1.0.min.js"></script>
+	<script type="text/javascript" src="__PUBLIC__/js/main.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/ueditor/ueditor.config.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/ueditor/ueditor.all.min.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/ueditor/lang/zh-cn/zh-cn.js"></script>
+    <style type="text/css">
+        .is-recommend{
+            width:20px;
+            height:20px;
+            vertical-align: top;
+        }
+    </style>
+</head>
+<body>
+	<include file="Public/head" />
+	<div class="content clearfix">
+		<include file="Public/left" />
+		<div class="content-right">
+			<div class="crumb-wrap">
+	            <div class="crumb-list">
+		            <i class="iconfont icon-document"></i>
+		            <a href="/jscss/admin">首页</a>
+		            <span>&gt;</span>
+		            <a href="#">文章管理</a>
+                    <span>&gt;</span>
+                    <span>新增文章</span>
+		        </div>
+	        </div>
+	        <div class="result-list">
+	        	<div class="result-content">
+                    <form method="post" action="__CONTROLLER__/edi" enctype="multipart/form-data">
+                        <input type="hidden" name="id" value="{$data.id}">
+    	        		<table class="add-table">
+    	        			<tr>
+                                <th width="120"><i class="require-red">*</i>分类：</th>
+                                <td>
+                                    <select name="cateid" id="cateid" class="required">
+                                        <option value="" selected="selected" hidden="hidden">请选择</option>
+                                        <volist id='vo' name='catedata'>
+                                            <option value="{$vo.id}" <if condition="$vo['id'] eq $data['cateid']">selected</if>>{$vo.catename}</option>
+                                        </volist>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th><i class="require-red">*</i>标题：</th>
+                                <td>
+                                    <input class="common-text required" id="title" name="title" size="50" value="{$data.title}" type="text">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>文章描述：</th>
+                                <td><textarea class="common-textarea" name="descr" rows="5">{$data.descr}</textarea></td>
+                            </tr>
+                            <tr>
+                                <th><i class="require-red">*</i>缩略图：</th>
+                                <td>
+                                    <input name="pic" id="" type="file">
+                                    <if condition="$data['pic'] neq ''">
+                                        <img src="__ROOT__/{$data.pic}" alt="{$data.title}" width="70px" height="40px">
+                                    <else/>
+                                        暂无缩略图
+                                    </if>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th><i class="require-red">*</i>是否推荐：</th>
+                                <td>
+                                    <input name="recommend" id="" type="radio" value="是"  class="is-recommend" <if condition="$data['recommend'] eq '是'">checked</if>>是
+                                    <input name="recommend" id="" type="radio" value="否" class="is-recommend" <if condition="$data['recommend'] eq '否'">checked</if>>否
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>内容：</th>
+                                <td><textarea name="content" class="common-textarea" id="content" cols="30" rows="10">{$data.content}</textarea></td>
+                            </tr>
+                            <tr>
+                                <th></th>
+                                <td>
+                                    <input class="btn btn-submit " value="提交" type="submit">
+                                    <input class="btn btn-return" onclick="history.go(-1)" value="返回" type="button">
+                                </td>
+                            </tr>
+    	        		</table>
+                    </form>
+	        	</div>
+	        </div>
+		</div>
+	</div>
+
+    <script type="text/javascript">
+        UE.getEditor('content',{initialFrameWidth:900,initialFrameHeight:400});
+    </script>
+</body>
+</html>

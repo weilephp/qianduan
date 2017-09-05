@@ -1,0 +1,68 @@
+.result-content .add-table td{
+	text-align: left;
+	padding-left:30px;
+}
+
+i{
+	font-style: normal;
+}
+
+.require-red{
+	color: #f60;
+    font-family: serif;
+    margin-right: 3px;
+}
+
+.result-content .add-table .common-text{
+	width:300px;
+	height:25px;
+	line-height: 28px;
+	border:1px solid #7f7f7f;
+	padding:2px 10px;
+	border-radius: 7px;
+	font-size: 14px;
+	outline-style: none;
+}
+.result-content .add-table .common-text:focus{
+	border-color: #46BDE0;
+}
+
+.result-content .add-table select{
+	font-size: 14px;
+}
+
+.result-content .add-table .common-textarea{
+	width:98%;
+}
+
+.result-content .add-table .btn{
+	width:120px;
+	height:30px;
+	text-align: center;
+	line-height: 30px;
+	font-size: 14px;
+	border-radius:5px;
+	cursor:pointer;
+	color:#fff;
+	margin-right:5px;
+}
+
+.result-content .add-table .btn-submit{
+	background-color: #006dcc;
+	border:1px solid #006dcc;	
+}
+
+.result-content .add-table .btn-submit:hover{
+	background-color: #fff;
+	color:#006dcc;
+}
+
+.result-content .add-table .btn-return{
+	background-color: #ff6347;
+	border:1px solid #ff6347;
+}
+
+.result-content .add-table .btn-return:hover{
+	background-color: #fff;
+	color:#ff6347;
+}

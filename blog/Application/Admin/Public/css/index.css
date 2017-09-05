@@ -1,0 +1,28 @@
+.crumb-list {
+	letter-spacing: 1px;
+}
+
+.main-content{
+	padding:20px 20px;
+}
+.main-content h1{
+	font-size: 18px;
+	height:35px;
+	line-height: 35px;
+	border-bottom: 1px solid #e5e5e5;
+	text-align: left;
+}
+
+.main-info li{
+	height:35px;
+	line-height: 35px;
+	border-bottom:1px dashed #e5e5e5;
+}
+
+.main-info li label{
+	display: inline-block;
+	width:200px;
+	text-align: right;
+	color:#a3a3a3;
+	margin-right: 15px;
+}

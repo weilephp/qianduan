@@ -1,0 +1,93 @@
+@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font: 14px/1.5 '微软雅黑';
+    background: #f9f9f9;
+}
+
+a {
+    color: #00007F;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #bd0a01;
+    text-decoration: underline;
+}
+
+.admin_login_wrap {
+    margin: 140px auto 0;
+    width: 312px;
+}
+
+.admin_login_wrap h1 {
+    font-family: '微软雅黑',sans-serif;
+    font-weight: normal;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.adming_login_border {
+    box-shadow: 1px 2px 3px #ccc;
+    border: 1px solid #eee;
+    background: #fff;
+    padding: 0 5px 15px;
+    overflow: hidden;
+}
+
+.admin_input {
+    margin: 15px auto 0;
+    width: 280px;
+}
+
+.admin_items li {
+    line-height: 28px;
+    margin-bottom: 10px;
+    list-style: none;
+    clear: both;
+}
+
+.admin_input label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.admin_input_style {
+	width:250px;
+    height: 30px;
+    line-height: 30px;
+    font-family: Arial,"宋体",sans-serif;
+    color: #333;
+    border: 1px solid #c3c3c3;
+    background: #fff;
+    border-radius: 5px;
+    padding: 3px;
+    transition-duration: 0.3s;
+}
+
+.admin_input_style:focus {
+    border-color: rgba(82, 168, 236, 0.8);
+}
+
+.btn-login {
+    width:150px;
+    height:30px;
+    margin-left:40px;
+    line-height: 30px;
+    text-align: center;
+    font-size: 16px;
+    color:#fff;
+    background-color: #00f;
+    border:1px solid #00f;
+    border-radius: 5px;
+    cursor:pointer;
+}
+.btn-login:hover{
+	background-color: #05A7CC;
+	border-color:#05A7CC;
+}

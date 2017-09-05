@@ -1,0 +1,19 @@
+<header class="header">
+	<div class="header-top">
+		<img src="__PUBLIC__/images/touxiang.jpg" class="touxiang" alt="钬、混迹天涯的头像">
+		<h1>钬、混迹天涯的博客</h1>
+	</div>
+	<nav>
+		<ul class="nav">
+			<li><a href="__MODULE__/Index/index" <if condition="'__CONTROLLER__' eq '/blog/index.php/Home/Index'">class="active"</if>>首页</a></li>
+			<li><a href="__MODULE__/Aboutme/index" <if condition="'__CONTROLLER__' eq '/blog/index.php/Home/Aboutme'">class="active"</if>>关于我</a></li>
+			<volist name='cateres' id='vo'>
+				<li><a href="__MODULE__/Cate/index/cid/{$vo.id}" <if condition="$vo['id'] eq $cateid">class="active"</if>>{$vo.catename}</a></li>
+			</volist>	
+		</ul>
+	</nav>
+	<form class="form-search clearfix" method="post" action="__MODULE__/Cate/searchLst">
+		<input type="text" name="keyWord" class="search-text" autocomplete="off" id="search_text">
+		<input type="submit" name="" class="search-submit" value="搜索">
+	</form>
+</header>

@@ -1,0 +1,296 @@
+/*html5*/
+article,aside,dialog,footer,header,section,footer,nav,figure,menu{display:block}
+/*html5*/
+
+*{
+	padding:0;
+	margin:0;
+}
+
+a{
+	text-decoration: none;
+}
+
+li{
+	list-style-type: none;
+}
+
+input{
+	border:none;
+	border:1px solid none;
+}
+
+.clearfix:after{
+	content:"";
+	display:block;
+	overflow: hidden;
+	clear:both;
+}
+.clearfix{
+	zoom:1;
+}
+
+body{
+	width:100%;
+	height:100%;
+	font:14px/1.5 "Microsoft Yahei",Arial,"宋体",sans-serif;
+	word-wrap: break-word;
+}
+
+/* 分页样式 page*/
+.num,.prev,.next{
+	color:#006dcc;
+}
+
+.num{
+	padding:0 5px;
+	font-size: 16px;
+}
+
+.current{
+	padding:0 5px;
+	background-color: #006dcc;
+	color:#fff;
+	font-size: 16px;
+}
+/* 分页样式 page*/
+
+/* 头部header */
+.header{
+	height:50px;
+	background-color:#000;
+	padding:0 23px;
+}
+
+.header a{
+	font-size: 18px;
+	color:#fff;
+}
+
+.header a:not(.active):hover{
+	background-color:rgba(255,255,255,0.2);
+	color:#FFFF00;
+}
+
+.navbar-nav{
+	float:left;
+}
+
+.navbar-brand{
+	height:50px;
+	line-height: 50px;
+	float:left;
+	color:#fff;
+	letter-spacing: 2px;
+	margin-right:25px;
+}
+
+.navbar-list{
+	float:left;
+}
+
+.navbar-list li,.top-info-wrap li{
+	float:left;
+	margin-right:5px;
+}
+
+.navbar-list li a,.top-info-wrap li a{
+	height:50px;
+	line-height: 50px;
+	text-align: center;
+	display: block;
+	padding:0 20px;
+}
+
+.top-info-wrap{
+	float:right;
+}
+
+.navbar-list li a.active{
+	background-color:#033b70;;
+}
+
+/* 内容部分 */
+/* 左边栏部分 */
+.content-left{
+	width:190px;
+	height:600px;
+	float:left;
+	border-right:1px solid #bebebe;
+}
+
+.sidebar-title{
+	font-weight: normal;
+	font-size:24px;
+	height:40px;
+	line-height: 40px;
+	background-color:#f3f3f3;
+	text-indent:20px;
+	color:#333;
+	border-bottom:1px solid #cecece;
+}
+
+.sidebar-item li i{
+	margin-right:3px;
+}
+
+.sidebar-item li a{
+    display: block;
+    height: 38px;
+    line-height: 38px;
+    color: #333;
+    padding:0 17px 0 45px;
+    border-bottom:1px solid #cecece;
+    border-top:1px solid #cecece;
+    font-size: 16px;
+}
+
+.sidebar-item li a:hover{
+	color:#3737aa;
+	background-color:#e8e8e8;
+}
+
+.sidebar-item .top-menu{
+	background-color:#f3f3f3;
+	padding:0 17px 0 25px;
+}
+
+.sidebar-item .top-menu:hover{
+	background-color:#fff;
+}
+
+.sidebar-item .sub-menu a{
+	font-size: 14px;
+}
+
+/* 内容右边部分 */
+.content-right{
+	float:left;
+	width:85.8%;
+}
+
+.crumb-wrap{
+	height:39px;
+	line-height: 39px;
+	border-bottom:1px solid #e5e5e5;
+	background-color: #f5f5f5;
+	padding-left:20px;
+}
+
+.crumb-list a{
+	color:#006dcc;
+}
+
+.crumb-list a:hover{
+	text-decoration: underline;
+}
+
+.search-content{
+	padding:15px 0;
+	border-bottom:1px solid #e5e5e5;
+}
+
+.search-content .form-group{
+	float:left;
+	margin-left:30px;
+}
+
+.search-content .search-text{
+	height:23px;
+	line-height: 23px;
+	padding:2px 4px;
+	background-color: #fff;
+	border:1px solid #b5b5b5;
+	border-radius:5px;
+}
+
+.search-content .search-select{
+	font-size: 14px;
+}
+
+.search-content .search-submit{
+	height:26px;
+	width:64px;
+	line-height: 26px;
+	text-align: center;
+	background-color: #006dcc;
+	font-size: 14px;
+	color:#fff;
+	border-radius:5px;
+	cursor:pointer;
+}
+
+.search-content .search-submit:hover{
+	background-color: #0000cd;
+}
+
+.form-group label{
+	margin-right:5px;
+}
+
+.result-list{
+	padding:0 20px;
+}
+
+.result-operation{
+	padding:18px 0 15px 0;
+}
+
+.result-operation a{
+	color:#428bca;
+	margin-right:20px;
+}
+
+.result-operation a:hover{
+	color:#0000cd;
+	margin-right:20px;
+}
+
+.result-content table{
+	border-collapse: collapse;
+	width:100%;
+}
+
+.result-content table th,.result-content table td{
+	border:1px solid #e8e8e8;
+	font-weight: normal;
+	padding:10px 0;
+	text-align: center;
+}
+
+.result-content table th{
+	font-size: 15px;
+}
+
+.result-content table td{
+	font-size: 14px;
+}
+
+.gaoliang{
+	background-color: #f4f4f4;
+}
+
+.result-content .sort-text{
+	width:25px;
+	height:25px;
+	line-height: 25px;
+	text-align: center;
+	border:1px solid #c7c7c7;
+}
+
+.list-page{
+	text-align: center;
+	margin-top:15px;
+}
+
+.result-content table a{
+	color:#006dcc;
+}
+
+.result-content table a:hover{
+	color:#0000cd;
+}
+
+.link-update{
+	margin-right:5px;
+}

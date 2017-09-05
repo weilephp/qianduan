@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>后台管理系统</title>
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/css/list.css">
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/add.css">
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/iconfont.css">
+	<script type="text/javascript" src="__PUBLIC__/js/html5shiv.js"></script>
+	<script type="text/javascript" src="__PUBLIC__/js/jquery-3.1.0.min.js"></script>
+	<script type="text/javascript" src="__PUBLIC__/js/main.js"></script>
+</head>
+<body>
+	<include file="Public/head" />
+	<div class="content clearfix">
+		<include file="Public/left" />
+		<div class="content-right">
+			<div class="crumb-wrap">
+	            <div class="crumb-list">
+		            <i class="iconfont icon-document"></i>
+		            <a href="/jscss/admin">首页</a>
+		            <span>&gt;</span>
+		            <a href="#">栏目管理</a>
+                    <span>&gt;</span>
+                    <span>新增栏目</span>
+		        </div>
+	        </div>
+	        <div class="result-list">
+	        	<div class="result-content">
+                    <form method="post" action="__CONTROLLER__/add" enctype="multipart/form-data">
+    	        		<table class="add-table">
+                            <tr>
+                                <th><i class="require-red">*</i>栏目名称：</th>
+                                <td>
+                                    <input class="common-text required" id="" name="catename" size="50" value="" type="text">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th><i class="require-red">*</i>排序：</th>
+                                <td>
+                                    <input class="common-text required" id="title" name="sort" size="50" value="" type="text">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th></th>
+                                <td>
+                                    <input class="btn btn-submit " value="提交" type="submit">
+                                    <input class="btn btn-return" onclick="history.go(-1)" value="返回" type="button">
+                                </td>
+                            </tr>
+    	        		</table>
+                    </form>
+	        	</div>
+	        </div>
+		</div>
+	</div>
+</body>
+</html>

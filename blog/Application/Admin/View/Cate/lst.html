@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>后台管理系统</title>
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/list.css">
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/iconfont.css">
+	<script type="text/javascript" src="__PUBLIC__/js/html5shiv.js"></script>
+	<script type="text/javascript" src="__PUBLIC__/js/jquery-3.1.0.min.js"></script>
+	<script type="text/javascript" src="__PUBLIC__/js/main.js"></script>
+	<script type="text/javascript" src="__PUBLIC__/js/cate.js"></script>
+</head>
+<body>
+	<include file="Public/head" />
+	<div class="content clearfix">
+		<include file="Public/left" />
+		<div class="content-right">
+			<div class="crumb-wrap">
+	            <div class="crumb-list">
+		            <i class="iconfont icon-document"></i>
+		            <a href="/jscss/admin">首页</a>
+		            <span class="crumb-step">&gt;</span>
+		            <span class="crumb-name">栏目管理</span>
+		        </div>
+	        </div>
+	        <div class="result-list">
+	        	<div class="result-operation">
+	        		<a href="__CONTROLLER__/add"><i class="iconfont icon-document"></i>新增栏目</a>
+	        		<a href="#" id="pl_del"><i class="iconfont icon-document"></i>批量删除</a>
+	        		<a href="#" id="sort"><i class="iconfont icon-document"></i>更新排序</a>
+	        	</div>
+	        	<div class="result-content">
+	        		<table id="result_table">
+	        			<tr class="gaoliang">
+	        				<th width="5%"><input name="" type="checkbox" id="checkboxAll"></th>
+                            <th>排序</th>
+                            <th>ID</th>
+                            <th>栏目名称</th>
+                            <th>操作</th>
+	        			</tr>
+                        <volist id='vo' name='list'>
+    	        			<tr>
+                                <td><input name="pl_opera" value="{$vo.id}" type="checkbox"></td>
+                                <td>
+                                    <input name="ord" value="{$vo.sort}" type="text" class="sort-text">
+                                </td>
+                                <td>{$vo.id}</td>
+                                <td>{$vo.catename}</td>
+                                <td>
+                                    <a class="link-update" href="__CONTROLLER__/edi/cateid/{$vo.id}">修改</a>
+                                    <a class="del" href="__CONTROLLER__/del/cateid/{$vo.id}">删除</a>
+                                </td>
+                            </tr>
+                        </volist>
+	        		</table>
+	        		<div class="list-page">{$page}</div>
+	        	</div>
+	        </div>
+		</div>
+	</div>
+</body>
+</html>

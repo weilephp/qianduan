@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>钬、混迹天涯的博客</title>
+	<link rel="shortcut icon" href="__PUBLIC__/images/Panda.ico" type="image/x-icon">
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/index.css">
+	<script type="text/javascript" src="__PUBLIC__/js/html5shiv.js"></script>
+	<script type="text/javascript" src="__PUBLIC__/js/jquery-3.1.0.min.js"></script>
+	<script src="__PUBLIC__/js/script.js"></script>
+</head>
+<body>
+	<div class="container">
+		<include file="Public/head" />
+
+		<div class="content">
+			<div class="content-body clearfix">
+				<div class="content-body-left">
+					<ul class="content-list">
+						<volist id="vo" name="list">
+							<li class="content-list-item">
+								<h1><a href="__MODULE__/Article/index/aid/{$vo.id}">{$vo.title}</a></h1>
+								<div class="media clearfix">
+									<if condition="$vo['pic'] neq ''">
+										<img src="__ROOT__/{$vo.pic}" alt="{$vo.title}">
+									<else/>
+										<img src="__PUBLIC__/images/no_img.png" alt="暂无缩略图" title="暂无缩略图">
+									</if>
+									<div class="media-left">
+										<p>{$vo.descr}</p>
+										<a href="__MODULE__/Article/index/aid/{$vo.id}">阅读全文&gt;&gt;</a>
+									</div>
+								</div>
+								<p><span>发布时间：{$vo.time|substr=0,10}</span><span>分类：[{$vo.catename}]</span></p>
+							</li>
+						</volist>
+					</ul>
+				</div><!--内容部分左边结束-->
+				<aside class="content-body-right">
+					<div class="notice-me">
+						<h1 class="title">关注我</h1>
+						<ul class="clearfix" id="contact_icon">
+							<li id="phone"></li>
+							<li id="email"></li>
+							<li id="qq"></li>
+							<li id="huizhang"></li>
+						</ul>
+						<div class="contact-msg" id="contact_msg" style="display: none;">
+							<span class="caret" id="caret"></span>
+							<div class="contact-outer-wrap">
+								<div class="contact-wrap" id="contact_wrap">
+									<p>phone：15521214104</p>
+									<p>email：weile_php@163.com</p>
+									<p>qq：1172010632</p>
+									<p>徽章：暂无</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="tuwen-tuijian">
+						<h1 class="title">图文推荐</h1>
+						<ul class="media">
+							<volist name='recoArtres' id='vo'>
+								<li class="clearfix">
+									<a href="__MODULE__/Article/index/aid/{$vo.id}" class="wrap-img img-link"><img src="__ROOT__/{$vo.pic}" alt="{$vo.title}"></a>
+									<div class="media-left">
+										<h1><a href="__MODULE__/Article/index/aid/{$vo.id}">{$vo.title}</a></h1>
+										<span class="message">{$vo.catename}</span>
+										<span class="time">{$vo.time|substr=0,10}</span>
+									</div>
+								</li>
+							</volist>
+						</ul>
+					</div>
+					<div class="recent-update">
+						<h1 class="title">最新更新</h1>
+						<ul>
+							<volist name='articleres' id='vo'>
+								<li><a href="__MODULE__/Article/index/aid/{$vo.id}">{$vo.title}</a></li>
+							</volist>
+						</ul>
+					</div>
+					<div class="youqing-link">
+						<h1 class="title">友情链接</h1>
+						<ul class="clearfix">
+							<volist name='linkres' id='vo'>
+								<li><a href="{$vo.url}" rel="nofollow" target="_blank">{$vo.title}</a></li>
+							</volist>
+						</ul>
+					</div>
+					<div class="shanshuihua"></div>
+				</aside>
+			</div>
+			<div class="gotop" id="gotop"></div>
+		</div>
+	</div>
+	<include file="Public/footer"/>
+
+	<script type="text/javascript">
+		showMessage();
+		returnTop();
+	</script>
+</body>
+</html>

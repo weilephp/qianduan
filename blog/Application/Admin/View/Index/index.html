@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>后台管理系统</title>
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/list.css">
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/css/index.css">
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/iconfont.css">
+	<script type="text/javascript" src="__PUBLIC__/js/html5shiv.js"></script>
+	<script type="text/javascript" src="__PUBLIC__/js/jquery-3.1.0.min.js"></script>
+	<script type="text/javascript" src="__PUBLIC__/js/main.js"></script>
+</head>
+<body>
+	<include file="Public/head" />
+	<div class="content clearfix">
+		<include file="Public/left" />
+		<div class="content-right">
+			<div class="crumb-wrap">
+	            <div class="crumb-list">
+                    欢迎来到<a href="#">钬、混迹天涯</a>个人博客的后台管理系统   
+                </div>
+	        </div>
+             <div class="main-content">
+                <h1 class="img-bg">基本信息</h1>
+                <ul class="main-info">
+                    <li>
+                        <label>博文数量</label>
+                        <span>{$articleNum}</span>
+                    </li>
+                    <li>
+                        <label>栏目数量</label>
+                        <span>{$cateNum}</span>
+                    </li>
+                    <li>
+                        <label>管理员数量</label>
+                        <span>{$adminNum}</span>
+                    </li>
+                    <li>
+                        <label>上传附件限制</label>
+                        <span>2M</span>
+                    </li>
+                    <li>
+                        <label>完成时间</label>
+                        <span id="time">2017/8/31</span>
+                    </li>
+                </ul>
+            </div>
+		</div>
+	</div>
+</body>
+</html>

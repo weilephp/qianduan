@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>钬、混迹天涯的博客</title>
+	<link rel="shortcut icon" href="__PUBLIC__/images/Panda.ico" type="image/x-icon">
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/index.css">
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/cate.css">
+	<script type="text/javascript" src="__PUBLIC__/js/html5shiv.js"></script>
+	<script type="text/javascript" src="__PUBLIC__/js/jquery-3.1.0.min.js"></script>
+	<script src="__PUBLIC__/js/script.js"></script>
+</head>
+<body>
+	<div class="body-top"></div>
+	<div class="container">
+		<include file="Public/head" />
+
+		<div class="content">
+			<div class="content-top"></div>
+			<div class="content-body-outer">
+				<div class="content-body clearfix">
+					<div class="content-body-left">
+						<ul class="content-list">
+							<volist name='list' id='vo'>
+								<li class="content-list-item">
+									<h1><a href="__MODULE__/Article/index/aid/{$vo.id}">{$vo.title}</a></h1>
+									<div class="media clearfix">
+										<if condition="$vo['pic'] neq ''">
+											<img src="__ROOT__/{$vo.pic}" alt="{$vo.title}">
+										<else/>
+											<img src="__PUBLIC__/images/no_img.png" alt="暂无缩略图" title="暂无缩略图">
+										</if>
+										<div class="media-left">
+											<p>{$vo.descr}</p>
+											<a href="__MODULE__/Article/index/aid/{$vo.id}">阅读全文&gt;&gt;</a>
+										</div>
+									</div>
+									<p><span>发布时间：{$vo.time|substr=0,10}</span><span>分类：[{$vo.catename}]</span></p>
+								</li>
+							</volist>
+							<div class="page-wrap">
+								<div class="page">
+									{$show}
+								</div>
+								<if condition="$total_page neq 1">
+									<form action="__CONTROLLER__/datePage" method="post" class="page-select">
+										<input type="hidden" name="Ym" value="{$dateMon}" >
+										<select name="p" id="page" count="{$total_page}" style="font-size: 14px;">
+										</select>
+										<input type="submit" name="" value="跳转" class="tiaozhuan">
+									</form>
+								</if>
+							</div>
+						</ul>
+					</div><!--内容部分左边结束-->
+					<include file='Public/aside' />
+				</div>
+			</div>
+			<div class="content-bottom"></div>
+			<div class="gotop" id="gotop"></div>
+		</div>
+	</div>
+	<include file="Public/footer" />
+
+	<script type="text/javascript">
+		showMessage();
+		addSelectPage();
+		selectMon('/blog/Home/Cate/articleDateLstSolve');
+		returnTop();
+	</script>
+</body>
+</html>

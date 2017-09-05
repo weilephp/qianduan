@@ -1,0 +1,24 @@
+[ 2017-09-02T16:01:25+08:00 ] ::1 /blog/index.php/Cate/index/cid/10p/2.html.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载模块:Cate
+
+[ 2017-09-02T16:01:44+08:00 ] ::1 /blog/index.php/Cate/index/cid/10/p/2.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载模块:Cate
+
+[ 2017-09-02T16:02:21+08:00 ] ::1 /blog/index.php/Cate/index/cid/10/p/2.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载模块:Cate
+
+[ 2017-09-02T16:02:26+08:00 ] ::1 /blog/index.php/index/cid/10/p/2.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载模块:Index
+
